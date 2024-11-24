@@ -4,174 +4,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Alex Guachi</title>
+    <title>Portafolio de Alex Guachi | Desarrollador Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Estilos generales */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
         }
 
-        /* Contenedor principal */
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
+        /* Header y navegación */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
-        /* Encabezado */
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 5px solid #333;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        header p {
-            margin: 10px 0 0;
-        }
-
-        /* Foto de perfil */
-        .profile-picture {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 3px solid #4CAF50;
-        }
-
-        /* Información personal */
-        .info {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .info h2 {
-            margin-bottom: 10px;
-        }
-
-        /* Sección de habilidades */
-        .skills {
-            margin-top: 20px;
-            list-style: none;
-            padding: 0;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
         }
 
-        .skills li {
-            margin: 5px 10px;
-            padding: 10px 15px;
-            background-color: #4CAF50;
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            border-radius: 5px;
-            font-size: 0.9em;
+            padding-top: 4rem;
         }
 
-        /* Sección de proyectos */
-        .projects {
-            margin-top: 30px;
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 2rem;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Secciones principales */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        /* Habilidades */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 15px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
 
-        .project-card h4 {
-            margin: 0 0 10px;
+        .project-card:hover {
+            transform: translateY(-10px);
         }
 
-        /* Sección de contacto */
-        .contact {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .contact a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 15px;
-            text-decoration: none;
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #2563eb, #1e40af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            background-color: #4CAF50;
-            border-radius: 5px;
+            font-size: 3rem;
         }
 
-        .contact a:hover {
-            background-color: #45a049;
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Contacto */
+        .contact-section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .social-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Alex Guachi</h1>
-        <p>Desarrollador Web | Estudiante de Ingeniería</p>
-    </header>
-
-    <div class="container">
-        <!-- Foto e información personal -->
-        <img src="UTA.jpeg" alt="Foto de perfil" class="profile-picture">
-        <div class="info">
-            <h2>Hola, soy Alex Guachi</h2>
-            <p>Soy un desarrollador apasionado con experiencia en Java, React, Node.js y bases de datos. Disfruto de
-                trabajar en equipo, aprender nuevas tecnologías y crear soluciones innovadoras.</p>
-        </div>
-
-        <!-- Habilidades -->
-        <h3>Habilidades</h3>
-        <ul class="skills">
-            <li>Java</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>SQL</li>
-            <li>Git</li>
-        </ul>
-
-        <!-- Proyectos -->
-        <div class="projects">
-            <h3>Proyectos</h3>
-            <div class="project-card">
-                <h4>Gestión de Elecciones</h4>
-                <p>Un sistema completo para gestionar candidatos y propuestas, utilizando Node.js, React y MySQL.</p>
-            </div>
-            <div class="project-card">
-                <h4>Sistema de Concesionaria</h4>
-                <p>Software para administrar autos, clientes y ventas, desarrollado en Java con persistencia en
-                    archivos.</p>
-            </div>
-            <div class="project-card">
-                <h4>Configuración de Redes Empresariales</h4>
-                <p>Simulación de redes empresariales con VLANs, InterVLAN y STP en Packet Tracer.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h3>AG</h3>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Contacto -->
-        <div class="contact">
-            <h3>Contacto</h3>
-            <a href="alexflakito15@gmail.com">Correo</a>
-            <a href="https://github.com/AlexGuachi" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/alexguachi" target="_blank">LinkedIn</a>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <img src="UTA.jpeg" alt="Alex Guachi" class="profile-picture">
+            <h1>Alex Guachi</h1>
+            <p>Desarrollador Web & Estudiante de Ingeniería</p>
+            <p class="hero-description">
+                Creando soluciones innovadoras a través del código, con pasión por el aprendizaje continuo y la
+                excelencia técnica.
+            </p>
         </div>
-    </div>
+    </section>
+
+    <section id="habilidades">
+        <h2 class="section-title">Mis Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+                <p>Desarrollo de aplicaciones robustas</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>Interfaces modernas y dinámicas</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+                <p>Backend eficiente y escalable</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+                <p>Gestión de bases de datos</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+                <p>Control de versiones</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <i class="fas fa-vote-yea"></i>
+                </div>
+                <div class="project-content">
+                    <h4>Gestión de Elecciones</h4>
+                    <p>Sistema completo para gestionar candidatos y propuestas, desarrollado con Node.js, React y MySQL.
+                        Implementación de autenticación y dashboard administrativo.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="project-content">
+                    <h4>Sistema de Concesionaria</h4>
+                    <p>Software para administrar inventario de vehículos, gestión de clientes y seguimiento de ventas.
+                        Desarrollado en Java con persistencia en archivos y patrones de diseño.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="project-content">
+                    <h4>Configuración de Redes</h4>
+                    <p>Diseño e implementación de redes empresariales utilizando VLANs, InterVLAN y STP en Packet
+                        Tracer. Configuración de políticas de seguridad y QoS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="contact-section">
+            <h2 class="section-title">¡Conectemos!</h2>
+            <p>¿Tienes un proyecto interesante? ¡Me encantaría colaborar!</p>
+            <div class="social-links">
+                <a href="mailto:alexflakito15@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    Correo
+                </a>
+                <a href="https://github.com/A1EXF6A" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="linkedin.com/in/alex-guachi-711299339" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
