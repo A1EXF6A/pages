@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Alex Guachi | Desarrollador Web</title>
+    <title>Portafolio de Alex Guachi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -232,6 +232,116 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .education-section {
+            padding: 5rem 2rem;
+            background-color: var(--bg-color);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .education-timeline {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem 0;
+            overflow-x: auto;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .timeline-marker {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 0 8px var(--bg-color), 0 0 0 10px var(--primary-color);
+        }
+
+        .timeline-marker i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .education-year {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .education-details {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .education-details li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive para educación horizontal */
+        @media (max-width: 1024px) {
+            .education-timeline {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 1rem;
+                scroll-snap-type: x mandatory;
+            }
+
+            .timeline-item {
+                scroll-snap-align: start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .education-section {
+                padding: 3rem 1rem;
+            }
+
+            .timeline-item {
+                min-width: 280px;
+            }
+        }
     </style>
 </head>
 
@@ -241,6 +351,7 @@
             <h3>AG</h3>
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
+                <a href="#educacion">Educación</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#proyectos">Proyectos</a>
                 <a href="#contacto">Contacto</a>
@@ -252,14 +363,88 @@
         <div class="hero-content">
             <img src="UTA.jpeg" alt="Alex Guachi" class="profile-picture">
             <h1>Alex Guachi</h1>
-            <p>Desarrollador Web & Estudiante de Ingeniería</p>
+            <p>Estudiante de Ingeniería</p>
+            <p class="hero-quote">"Construyo ideas que conectan con el futuro."</p>
+
             <p class="hero-description">
                 Creando soluciones innovadoras a través del código, con pasión por el aprendizaje continuo y la
                 excelencia técnica.
             </p>
+
         </div>
     </section>
+    <section id="educacion" class="education-section">
+        <h2 class="section-title">Mi Trayectoria Educativa</h2>
 
+        <div class="education-timeline">
+            <!-- Universidad -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="education-year">2024 - Presente</div>
+                    <h3>Ingeniería en Software</h3>
+                    <h4>Universidad Técnica de Ambato</h4>
+                    <ul class="education-details">
+                        <li>
+                            <span class="detail-label">Área de Especialización:</span>
+                            Diseño y desarrollo de aplicaciones software
+                        </li>
+                        <li>
+                            <span class="detail-label">Materias Relevantes:</span>
+                            Programación Orientada a Objetos, Bases de Datos, Redes, Fundamentos en Ingeniería de
+                            Software
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Instituto -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="education-year">2015 - 2021</div>
+                    <h3>Bachillerato Tecnico</h3>
+                    <h4>Unidad educativa "Jorge Alvarez"</h4>
+                    <ul class="education-details">
+                        <li>
+                            <span class="detail-label">Especialización:</span>
+                            Tecnico en Electronica e Industrial
+                        </li>
+                        <li>
+                            <span class="detail-label">Materias Relevantes:</span>
+                            Electronica Digital, Circuitos Electricos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Escuela -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="education-year">2008 - 2015</div>
+                    <h3>Educación Básica</h3>
+                    <h4>Unidad Educativa "Los Andes"</h4>
+                    <ul class="education-details">
+                        <li>
+                            <span class="detail-label">Distinción:</span>
+                            Excelencia Académica en Matemáticas
+                        </li>
+                        <li>
+                            <span class="detail-label">Actividades:</span>
+                            Club de dibujo, Club de primeros auxilios
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="habilidades">
         <h2 class="section-title">Mis Habilidades</h2>
         <div class="skills-grid">
@@ -340,7 +525,7 @@
                     <i class="fab fa-github"></i>
                     GitHub
                 </a>
-                <a href="linkedin.com/in/alex-guachi-711299339" target="_blank" class="social-link">
+                <a href="https://linkedin.com/in/alex-guachi-711299339" target="_blank" class="social-link">
                     <i class="fab fa-linkedin"></i>
                     LinkedIn
                 </a>
