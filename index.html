@@ -5,173 +5,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Alex Guachi</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Contenedor principal */
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* Encabezado */
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 5px solid #333;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        header p {
-            margin: 10px 0 0;
-        }
-
-        /* Foto de perfil */
-        .profile-picture {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 3px solid #4CAF50;
-        }
-
-        /* Información personal */
-        .info {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .info h2 {
-            margin-bottom: 10px;
-        }
-
-        /* Sección de habilidades */
-        .skills {
-            margin-top: 20px;
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .skills li {
-            margin: 5px 10px;
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-
-        /* Sección de proyectos */
-        .projects {
-            margin-top: 30px;
-        }
-
-        .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 15px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h4 {
-            margin: 0 0 10px;
-        }
-
-        /* Sección de contacto */
-        .contact {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .contact a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 15px;
-            text-decoration: none;
-            color: white;
-            background-color: #4CAF50;
-            border-radius: 5px;
-        }
-
-        .contact a:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Alex Guachi</h1>
-        <p>Desarrollador Web | Estudiante de Ingeniería</p>
-    </header>
-
-    <div class="container">
-        <!-- Foto e información personal -->
-        <img src="UTA.jpeg" alt="Foto de perfil" class="profile-picture">
-        <div class="info">
-            <h2>Hola, soy Alex Guachi</h2>
-            <p>Soy un desarrollador apasionado con experiencia en Java, React, Node.js y bases de datos. Disfruto de
-                trabajar en equipo, aprender nuevas tecnologías y crear soluciones innovadoras.</p>
-        </div>
-
-        <!-- Habilidades -->
-        <h3>Habilidades</h3>
-        <ul class="skills">
-            <li>Java</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>SQL</li>
-            <li>Git</li>
-        </ul>
-
-        <!-- Proyectos -->
-        <div class="projects">
-            <h3>Proyectos</h3>
-            <div class="project-card">
-                <h4>Gestión de Elecciones</h4>
-                <p>Un sistema completo para gestionar candidatos y propuestas, utilizando Node.js, React y MySQL.</p>
-            </div>
-            <div class="project-card">
-                <h4>Sistema de Concesionaria</h4>
-                <p>Software para administrar autos, clientes y ventas, desarrollado en Java con persistencia en
-                    archivos.</p>
-            </div>
-            <div class="project-card">
-                <h4>Configuración de Redes Empresariales</h4>
-                <p>Simulación de redes empresariales con VLANs, InterVLAN y STP en Packet Tracer.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h3>AG</h3>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#educacion">Educación</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Contacto -->
-        <div class="contact">
-            <h3>Contacto</h3>
-            <a href="alexflakito15@gmail.com">Correo</a>
-            <a href="https://github.com/AlexGuachi" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/alexguachi" target="_blank">LinkedIn</a>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <img src="UTA.jpeg" alt="Alex Guachi" class="profile-picture">
+            <h1>Alex Guachi</h1>
+            <p>Estudiante de Ingeniería en Software</p>
+
+            <p class="hero-quote">"Construyo ideas que conectan con el futuro."</p>
+
+            <p class="hero-description">
+                Creando soluciones innovadoras a través del código, con pasión por el aprendizaje continuo y la
+                excelencia técnica.
+            </p>
+
+
         </div>
-    </div>
+    </section>
+    <section id="educacion" class="education-section">
+        <h2 class="section-title">Mi Trayectoria Educativa</h2>
+
+        <div class="education-timeline">
+            <!-- Universidad -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="education-year">2024 - Presente</div>
+                    <h3>Ingeniería en Software</h3>
+                    <h4>Universidad Técnica de Ambato</h4>
+                    <ul class="education-details">
+                        <li>
+                            <span class="detail-label">Área de Especialización:</span>
+                            Diseño y desarrollo de aplicaciones software
+                        </li>
+                        <li>
+                            <span class="detail-label">Materias Relevantes:</span>
+                            Programación Orientada a Objetos, Bases de Datos, Redes, Fundamentos en Ingeniería de
+                            Software
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Instituto -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="education-year">2015 - 2021</div>
+                    <h3>Bachillerato Tecnico</h3>
+                    <h4>Unidad educativa "Jorge Alvarez"</h4>
+                    <ul class="education-details">
+                        <li>
+                            <span class="detail-label">Especialización:</span>
+                            Tecnico en Electronica e Industrial
+                        </li>
+                        <li>
+                            <span class="detail-label">Materias Relevantes:</span>
+                            Electronica Digital, Circuitos Electricos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Escuela -->
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="education-year">2008 - 2015</div>
+                    <h3>Educación Básica</h3>
+                    <h4>Unidad Educativa "Los Andes"</h4>
+                    <ul class="education-details">
+                        <li>
+                            <span class="detail-label">Distinción:</span>
+                            Excelencia Académica en Matemáticas
+                        </li>
+                        <li>
+                            <span class="detail-label">Actividades:</span>
+                            Club de dibujo, Club de primeros auxilios
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="habilidades">
+        <h2 class="section-title">Mis Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+                <p>Desarrollo de aplicaciones robustas</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>Interfaces modernas y dinámicas</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+                <p>Backend eficiente y escalable</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+                <p>Gestión de bases de datos</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+                <p>Control de versiones</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <i class="fas fa-vote-yea"></i>
+                </div>
+                <div class="project-content">
+                    <h4>Gestión de Elecciones</h4>
+                    <p>Sistema completo para gestionar candidatos y propuestas, desarrollado con Node.js, React y MySQL.
+                        Implementación de autenticación y dashboard administrativo.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="project-content">
+                    <h4>Sistema de Concesionaria</h4>
+                    <p>Software para administrar inventario de vehículos, gestión de clientes y seguimiento de ventas.
+                        Desarrollado en Java con persistencia en archivos y patrones de diseño.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="project-content">
+                    <h4>Configuración de Redes</h4>
+                    <p>Diseño e implementación de redes empresariales utilizando VLANs, InterVLAN y STP en Packet
+                        Tracer. Configuración de políticas de seguridad y QoS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="contact-section">
+            <h2 class="section-title">¡Conectemos!</h2>
+            <p>¿Tienes un proyecto interesante? ¡Me encantaría colaborar!</p>
+            <div class="social-links">
+                <a href="mailto:alexflakito15@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    Correo
+                </a>
+                <a href="https://github.com/A1EXF6A" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/alex-guachi-711299339" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
