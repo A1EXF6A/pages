@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Frases</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Buscador de Frases</h1>
+  <input type="text" id="buscador" placeholder="Escribe para buscar...">
+  <ul id="listaFrases">
+    <li>El conocimiento es poder</li>
+    <li>La práctica hace al maestro</li>
+    <li>El tiempo es oro</li>
+    <li>Más vale tarde que nunca</li>
+    <li>No dejes para mañana lo que puedes hacer hoy</li>
+  </ul>
+
+  <script>
+    const buscador = document.getElementById('buscador');
+    const listaFrases = document.getElementById('listaFrases');
+    const frases = Array.from(listaFrases.getElementsByTagName('li'));
+
+    buscador.addEventListener('input', () => {
+      const texto = buscador.value.toLowerCase();
+      frases.forEach(frase => {
+        frase.style.display = frase.textContent.toLowerCase().includes(texto) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
